@@ -63,14 +63,22 @@ public class TicTacToe2 extends JFrame {
 
                  case 1:
                      buttonClicked.setIcon(new ImageIcon(this.getClass().getResource("cross.jpg")));
+                     buttonClicked.setButtonValue(1);
                      break;
 
                  case 2:
                      buttonClicked.setIcon(new ImageIcon(this.getClass().getResource("circle.jpg")));
+                     buttonClicked.setButtonValue(2);
                      break;
              }
 
              whoseTurn++;
+         }
+
+         public boolean checkForWin(){
+
+             
+            return true;
          }
      }
 }
