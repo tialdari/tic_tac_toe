@@ -2,11 +2,12 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class XOButton extends JButton implements ActionListener {
+public class XOButton extends JButton  {
 
 
     ImageIcon X,O;
     byte value = 0;
+
     /*
     0: nothing
     1: X
@@ -15,8 +16,11 @@ public class XOButton extends JButton implements ActionListener {
     public XOButton(){
         X = new ImageIcon(this.getClass().getResource("cross.jpg"));
         O = new ImageIcon(this.getClass().getResource("circle.jpg"));
-        this.addActionListener(this);
+       // this.addActionListener(this);
     }
+
+
+
 
     public void actionPerformed(ActionEvent e){
 

@@ -6,11 +6,11 @@ public class TicTacToe extends JFrame {
     JPanel p = new JPanel();
     XOButton [] buttons  = new XOButton[9];
 
-
+/*
     public static void main(String [] args){
         new TicTacToe();
     }
-
+*/
     public TicTacToe(){
         super("Tic Tac Toe");
         setSize(400, 400);
@@ -21,11 +21,29 @@ public class TicTacToe extends JFrame {
         for(int i = 0; i < 9; i ++){
             buttons[i] = new XOButton();
             p.add(buttons[i]);
+
         }
         add(p);
 
         setVisible(true);
 
+    }
+
+    public void play(){
+
+        boolean player1win = false;
+        boolean player2win = false;
+
+
+        while(!player1win || !player2win){
+
+            //player1 moves
+            //player2 moves
+            //check for win
+            //or end of game
+
+
+        }
     }
 
 }
