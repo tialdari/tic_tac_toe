@@ -11,6 +11,14 @@ public class XOButton2 extends JButton {
         buttonValue = 0;
     }
 
+    public ImageIcon getImageX(){
+        return X;
+    }
+
+    public ImageIcon getImageO(){
+        return O;
+    }
+
     public void setButtonValue(int buttonValue) {
         this.buttonValue = buttonValue;
     }
