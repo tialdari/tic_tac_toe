@@ -85,7 +85,15 @@ public class TicTacToe2 extends JFrame {
                      break;
              }
 
+
+
              checkForWin();
+             transpose();
+             checkForWin();
+             transpose();
+
+
+
              System.out.println("");
 
              whoseTurn++;
@@ -106,20 +114,63 @@ public class TicTacToe2 extends JFrame {
                      System.out.print(buttonValue + " ");
 
                      if(buttonValue == 0) {
-                         // sum = 0;
+                          sum = 0;
                           break;
                      }
                  }
 
                  if(sum == 3){
                      displayCommunicate(1);
+                     return;
                  }else if(sum == 6){
                      displayCommunicate(2);
+                     return;
                  }
-                 
+
+
+
                  System.out.print(" Row sum is: " + sum);
                  System.out.println(" ");
              }
+
+
+                sum = 0;
+                int value = 0;
+
+                /*
+             for(int i = 0; i < 3; i++){
+                 for(int j = i; j == i; j++){
+
+                     value = buttons[i][j].getButtonValue();
+                     sum += value;
+                 }
+                 if(value == 0){
+                    sum = 0;
+                     break;
+                 }
+                 if(sum == 3) displayCommunicate(1);
+                 else if(sum == 6) displayCommunicate(2);
+             }
+
+                sum = 0;
+
+             for(int i = 2; i < 3; i--){
+                 for(int j = i; j == i; j++){
+
+                     value = buttons[i][j].getButtonValue();
+                     sum += value;
+                 }
+                 if(value == 0){
+                     sum = 0;
+                     break;
+                 }
+                 if(sum == 3) displayCommunicate(1);
+                 else if(sum == 6) displayCommunicate(2);
+             }
+
+*/
+
+
          }
 
          public void displayCommunicate(int imageValue){
@@ -146,6 +197,31 @@ public class TicTacToe2 extends JFrame {
              communicateWindow.setVisible(true);
 
 
+         }
+
+         public void transpose() {
+
+             int temporary = 0;
+
+             for (int i = 0; i < 3; i++) {
+                 for (int j = i; j < 3; j++) {
+
+                     temporary = buttons[i][j].getButtonValue();
+                     buttons[i][j].setButtonValue(buttons[j][i].getButtonValue());
+                     buttons[j][i].setButtonValue(temporary);
+                 }
+                 System.out.println("");
+             }
+
+             /*
+             for (int i = 0; i < 3; i++) {
+                 for (int j = 0; j < 3; j++) {
+
+                     System.out.print(buttons[i][j].getButtonValue() + " ");
+                 }
+                 System.out.println("");
+             }
+            */
          }
      }
 }
