@@ -2,11 +2,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TicTacToe2 extends JFrame {
 
 
     XOButton2 [] buttons = new XOButton2[9];
+    List<XOButton2> usedButtons = new ArrayList<XOButton2>();
     JPanel p = new JPanel();
     int whoseTurn = 2;
 
@@ -46,7 +49,9 @@ public class TicTacToe2 extends JFrame {
          @Override
          public void actionPerformed(ActionEvent e) {
 
-             JButton buttonClicked = (JButton)e.getSource();
+             XOButton2 buttonClicked = (XOButton2) e.getSource();
+             if(usedButtons.contains(buttonClicked)) return;
+             usedButtons.add(buttonClicked);
              whoseTurn %= 3;
              if(whoseTurn == 0) whoseTurn ++;
 
