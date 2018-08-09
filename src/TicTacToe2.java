@@ -35,6 +35,7 @@ public class TicTacToe2 extends JFrame {
      public void initialiseButtons(){
 
          for(int i = 0; i < 9; i ++){
+
              buttons[i] = new XOButton2();
              buttons[i].addActionListener(new buttonListener());
              p.add(buttons[i]);
@@ -53,13 +54,12 @@ public class TicTacToe2 extends JFrame {
              if(usedButtons.contains(buttonClicked)) return;
              usedButtons.add(buttonClicked);
              whoseTurn %= 3;
-             if(whoseTurn == 0) whoseTurn ++;
+
 
              switch(whoseTurn){
 
                  case 0:
-                     buttonClicked.setIcon(null);
-                     break;
+                     whoseTurn++;
 
                  case 1:
                      buttonClicked.setIcon(new ImageIcon(this.getClass().getResource("cross.jpg")));
@@ -72,13 +72,49 @@ public class TicTacToe2 extends JFrame {
                      break;
              }
 
+             checkForWin();
              whoseTurn++;
          }
 
          public boolean checkForWin(){
 
-             
+             int sum = 0;
+             int button = 0;
+
+             for(int i = 0; i < 9; i++){
+
+                 System.out.print(buttons[i].getButtonValue());
+
+             }
+
+                System.out.println("");
+
+            displayCommunicate(1);
             return true;
+         }
+
+         public void displayCommunicate(int imageValue){
+
+             JFrame communicateWindow = new JFrame();
+             communicateWindow.setSize(200,200);
+             communicateWindow.setLayout(new FlowLayout());
+             
+             JTextField communicate = new JTextField();
+             communicate.setSize(20, 20);
+             communicateWindow.add(new JTextField("The winner is: "));
+
+             switch(imageValue){
+
+                 case 1:
+                     communicateWindow.add(new JTextField(" X"));
+                     break;
+                 case 2:
+                     communicateWindow.add(new JTextField(" O"));
+                     break;
+             }
+             communicateWindow.setVisible(true);
+
+
          }
      }
 }

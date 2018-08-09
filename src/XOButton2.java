@@ -8,7 +8,7 @@ public class XOButton2 extends JButton {
     public XOButton2(){
         X = new ImageIcon(this.getClass().getResource("cross.jpg"));
         O = new ImageIcon(this.getClass().getResource("circle.jpg"));
-        buttonValue = 2;
+        buttonValue = 0;
     }
 
     public void setButtonValue(int buttonValue) {
