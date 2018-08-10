@@ -45,7 +45,7 @@ public class TicTacToe extends JFrame {
 
     }
 
-    
+
 
     private class buttonListener implements ActionListener {
 
@@ -81,6 +81,7 @@ public class TicTacToe extends JFrame {
             checkForWin();
             transpose();
 
+
             whoseTurn++;
         }
 
@@ -102,14 +103,7 @@ public class TicTacToe extends JFrame {
                     pattern += sign;
                 }
 
-                if (pattern.equals("XXX")) {
-                    displayMessage("X");
-                    return true;
-
-                } else if (pattern.equals("OOO")) {
-                    displayMessage("O");
-                    return true;
-                }
+                pointTheWinner(pattern);
 
             }
 
@@ -126,8 +120,7 @@ public class TicTacToe extends JFrame {
 
                 }
 
-                if (pattern.equals("XXX")) displayMessage("X");
-                else if (pattern.equals("OOO")) displayMessage("O");
+               pointTheWinner(pattern);
             }
 
             pattern = "";
@@ -144,12 +137,10 @@ public class TicTacToe extends JFrame {
                             pattern = "";
                             break;
                         }
-                        System.out.print(pattern + " ");
                     }
                 }
 
-                if (pattern.equals("XXX")) displayMessage("X");
-                else if (pattern.equals("OOO")) displayMessage("O");
+                pointTheWinner(pattern);
             }
 
             return false;
@@ -164,7 +155,7 @@ public class TicTacToe extends JFrame {
 
             messageWindow.setSize(200, 200);
             messageWindow.setLayout(new FlowLayout());
-            messageWindow.setDefaultCloseOperation(EXIT_ON_CLOSE);
+           // messageWindow.setDefaultCloseOperation(EXIT_ON_CLOSE);
             messageWindow.setResizable(false);
             messageWindow.setVisible(true);
 
@@ -187,6 +178,37 @@ public class TicTacToe extends JFrame {
                     buttons[j][i] = temporary;
                 }
             }
+        }
+
+        public void reset(){
+
+            usedButtons.clear();
+
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+
+                    buttons[i][j].setIcon(null);
+                    buttons[i][j].setButtonSign("");
+                }
+            }
+
+        }
+
+        public void pointTheWinner(String pattern){
+
+            if (pattern.equals("XXX")){
+
+                displayMessage("X");
+                reset();
+                whoseTurn = 2;
+            }
+            else if (pattern.equals("OOO")){
+
+                displayMessage("O");
+                reset();
+                whoseTurn = 2;
+            }
+
         }
 
     }
