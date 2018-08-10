@@ -35,7 +35,7 @@ public class XOButton2 extends JButton {
     }
 
 
-    /*
+
     public void setButtonValue(int buttonValue) {
         this.buttonValue = buttonValue;
     }
@@ -44,5 +44,5 @@ public class XOButton2 extends JButton {
 
         return buttonValue;
     }
-    */
+
 }
