@@ -76,21 +76,23 @@ public class TicTacToe2 extends JFrame {
 
                  case 1:
                      buttonClicked.setIcon(buttonClicked.getImageX());
-                     buttonClicked.setButtonValue(1);
+                     buttonClicked.setButtonSign("X");
                      break;
 
                  case 2:
                      buttonClicked.setIcon(buttonClicked.getImageO());
-                     buttonClicked.setButtonValue(2);
+                     buttonClicked.setButtonSign("O");
                      break;
              }
 
 
 
+
              checkForWin();
-             transpose();
-             checkForWin();
-             transpose();
+                 transpose();
+                 checkForWin();
+                 transpose();
+
 
 
 
@@ -99,43 +101,36 @@ public class TicTacToe2 extends JFrame {
              whoseTurn++;
          }
 
-         public void checkForWin(){
+         public boolean checkForWin(){
 
-             int sum = 0;
-             int buttonValue;
+             String sign = "";
+             String pattern = "";
 
              for(int i = 0; i < 3; i ++) {
-                 sum = 0;
+                 pattern = "";
                  for (int j = 0; j < 3; j++) {
 
-                     buttonValue = buttons[i][j].getButtonValue();
-                     sum += buttonValue;
+                     sign = buttons[i][j].getButtonSign();
+                     pattern += sign;
 
-                     System.out.print(buttonValue + " ");
-
-                     if(buttonValue == 0) {
-                          sum = 0;
-                          break;
-                     }
                  }
 
-                 if(sum == 3){
+                 System.out.println(pattern + " ");
+
+                 if(pattern.equals("XXX")){
                      displayCommunicate(1);
-                     return;
-                 }else if(sum == 6){
+                     return true;
+
+                 }else if(pattern.equals("OOO")){
                      displayCommunicate(2);
-                     return;
+                     return true;
                  }
+                 System.out.println("");
 
-
-
-                 System.out.print(" Row sum is: " + sum);
-                 System.out.println(" ");
              }
+             return false;
 
 
-                sum = 0;
-                int value = 0;
 
                 /*
              for(int i = 0; i < 3; i++){
@@ -201,14 +196,14 @@ public class TicTacToe2 extends JFrame {
 
          public void transpose() {
 
-             int temporary = 0;
+             XOButton2 temporary;
 
              for (int i = 0; i < 3; i++) {
                  for (int j = i; j < 3; j++) {
 
-                     temporary = buttons[i][j].getButtonValue();
-                     buttons[i][j].setButtonValue(buttons[j][i].getButtonValue());
-                     buttons[j][i].setButtonValue(temporary);
+                     temporary = buttons[i][j];
+                     buttons[i][j] = buttons[j][i];
+                     buttons[j][i] = temporary;
                  }
                  System.out.println("");
              }
@@ -223,6 +218,17 @@ public class TicTacToe2 extends JFrame {
              }
             */
          }
+
+         /*
+         public void reset(){
+             for(int i = 0; i < 3; i++){
+                 for(int j = 0; j < 3; j++){
+                     buttons[i][j].setButtonValue(0);
+                     buttons[i][j].setIcon(buttons[i][j].getN());
+                 }
+             }
+         }
+         */
      }
 }
 
