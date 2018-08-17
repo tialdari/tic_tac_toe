@@ -11,7 +11,7 @@ public class TicTacToe extends JFrame {
     XOButton[][] buttons = new XOButton[3][3];
     List<XOButton> usedButtons = new ArrayList<>();
     JPanel p = new JPanel();
-    int whoseTurn = 2;
+    int whoseTurn = 1;
 
      /*
     0: nothing
@@ -28,6 +28,7 @@ public class TicTacToe extends JFrame {
         p.setLayout(new GridLayout(3, 3));
         add(p);
         initialiseButtons();
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 
@@ -58,31 +59,32 @@ public class TicTacToe extends JFrame {
             if (usedButtons.contains(buttonClicked)) return;
             usedButtons.add(buttonClicked);
 
-            whoseTurn %= 3;
+            whoseTurn %= 2;
 
             switch (whoseTurn) {
 
                 case 0:
-                    whoseTurn++;
-
-                case 1:
                     buttonClicked.setIcon(buttonClicked.getImageX());
                     buttonClicked.setButtonSign("X");
                     break;
 
-                case 2:
+                case 1:
                     buttonClicked.setIcon(buttonClicked.getImageO());
                     buttonClicked.setButtonSign("O");
                     break;
+
+
             }
 
-            checkForWin();
+            if(checkForWin() == true) return;
             transpose();
-            checkForWin();
+            if(checkForWin() == true) return;
             transpose();
-
 
             whoseTurn++;
+
+            if(usedButtons.size() == 9) reset();
+
         }
 
 
@@ -103,7 +105,8 @@ public class TicTacToe extends JFrame {
                     pattern += sign;
                 }
 
-                pointTheWinner(pattern);
+                if(pointTheWinner(pattern) == true) return true;
+
 
             }
 
@@ -120,8 +123,8 @@ public class TicTacToe extends JFrame {
 
                 }
 
-               pointTheWinner(pattern);
-            }
+                if(pointTheWinner(pattern) == true) return true;
+                           }
 
             pattern = "";
 
@@ -140,13 +143,12 @@ public class TicTacToe extends JFrame {
                     }
                 }
 
-                pointTheWinner(pattern);
-            }
+                if(pointTheWinner(pattern) == true) return true;
+                         }
 
             return false;
 
         }
-
 
 
         public void displayMessage(String winner) {
@@ -157,13 +159,13 @@ public class TicTacToe extends JFrame {
             messageWindow.setLayout(new FlowLayout());
            // messageWindow.setDefaultCloseOperation(EXIT_ON_CLOSE);
             messageWindow.setResizable(false);
+            messageWindow.setLocationRelativeTo(null);
+
             messageWindow.setVisible(true);
 
 
-            JTextField message = new JTextField();
-
-            message.setSize(20, 20);
-            messageWindow.add(new JTextField("The winner is: " + winner));
+            JLabel message = new JLabel("The winner is: " + winner);
+            messageWindow.add(message);
         }
 
         public void transpose() {
@@ -194,20 +196,23 @@ public class TicTacToe extends JFrame {
 
         }
 
-        public void pointTheWinner(String pattern){
+        public boolean pointTheWinner(String pattern){
 
             if (pattern.equals("XXX")){
 
                 displayMessage("X");
                 reset();
                 whoseTurn = 2;
+                return true;
             }
             else if (pattern.equals("OOO")){
 
                 displayMessage("O");
                 reset();
                 whoseTurn = 2;
+                return true;
             }
+            return false;
 
         }
 
