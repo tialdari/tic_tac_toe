@@ -11,6 +11,7 @@ public class TicTacToe extends JFrame {
     XOButton[][] buttons = new XOButton[3][3];
     List<XOButton> usedButtons = new ArrayList<>();
     JPanel p = new JPanel();
+
     int whoseTurn = 1;
 
      /*
@@ -45,7 +46,6 @@ public class TicTacToe extends JFrame {
         }
 
     }
-
 
 
     private class buttonListener implements ActionListener {
@@ -105,11 +105,15 @@ public class TicTacToe extends JFrame {
                     pattern += sign;
                 }
 
+                System.out.println(pattern);
                 if(pointTheWinner(pattern) == true) return true;
 
 
             }
 
+            System.out.println(pattern);
+
+            pattern = "";
             for (int i = 0; i < 3; i++) {
                 for (int j = i; j == i; j++) {
 
@@ -122,9 +126,9 @@ public class TicTacToe extends JFrame {
                     }
 
                 }
-
+                System.out.println(pattern);
                 if(pointTheWinner(pattern) == true) return true;
-                           }
+            }
 
             pattern = "";
 
@@ -142,7 +146,7 @@ public class TicTacToe extends JFrame {
                         }
                     }
                 }
-
+                System.out.println(pattern);
                 if(pointTheWinner(pattern) == true) return true;
                          }
 
@@ -153,19 +157,9 @@ public class TicTacToe extends JFrame {
 
         public void displayMessage(String winner) {
 
-            JFrame messageWindow = new JFrame();
+            new Message(winner);
+            reset();
 
-            messageWindow.setSize(200, 200);
-            messageWindow.setLayout(new FlowLayout());
-           // messageWindow.setDefaultCloseOperation(EXIT_ON_CLOSE);
-            messageWindow.setResizable(false);
-            messageWindow.setLocationRelativeTo(null);
-
-            messageWindow.setVisible(true);
-
-
-            JLabel message = new JLabel("The winner is: " + winner);
-            messageWindow.add(message);
         }
 
         public void transpose() {
@@ -201,14 +195,14 @@ public class TicTacToe extends JFrame {
             if (pattern.equals("XXX")){
 
                 displayMessage("X");
-                reset();
+               // reset();
                 whoseTurn = 2;
                 return true;
             }
             else if (pattern.equals("OOO")){
 
                 displayMessage("O");
-                reset();
+              //  reset();
                 whoseTurn = 2;
                 return true;
             }
