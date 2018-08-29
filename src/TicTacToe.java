@@ -49,7 +49,8 @@ public class TicTacToe extends JFrame {
 
         leftButton = new JButton("Reset");
         leftButton.setFont(myFont);
-        points = new JLabel("<html>Player 1 : Player 2  <br/> 0 : 0</html>" , SwingConstants.CENTER);
+        leftButton.addActionListener(new resetButtonListener());
+        points = new JLabel("<html>Player 1 : Player 2  <br/> 0 : 0</html>", SwingConstants.CENTER);
         /*
         String  sText  = "<html>Player 1 : Player 2  <br/> 0 : 0</html>";
         points.setText (sText);
@@ -85,15 +86,28 @@ public class TicTacToe extends JFrame {
             for (int j = 0; j < 3; j++) {
 
                 buttons[i][j] = new XOButton();
-                buttons[i][j].addActionListener(new buttonListener());
+                buttons[i][j].addActionListener(new customButtonListener());
                 bottomPanel.add(buttons[i][j]);
             }
         }
 
     }
 
+    public void reset() {
 
-    private class buttonListener implements ActionListener {
+        usedButtons.clear();
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+
+                buttons[i][j].setIcon(null);
+                buttons[i][j].setButtonSign("");
+            }
+        }
+
+    }
+
+    private class customButtonListener implements ActionListener {
 
 
         @Override
@@ -121,18 +135,16 @@ public class TicTacToe extends JFrame {
 
             }
 
-            if(checkForWin() == true) return;
+            if (checkForWin() == true) return;
             transpose();
-            if(checkForWin() == true) return;
+            if (checkForWin() == true) return;
             transpose();
 
             whoseTurn++;
 
-            if(usedButtons.size() == 9) reset();
+            if (usedButtons.size() == 9) reset();
 
         }
-
-
 
 
         public boolean checkForWin() {
@@ -151,7 +163,7 @@ public class TicTacToe extends JFrame {
                 }
 
                 System.out.println(pattern);
-                if(pointTheWinner(pattern) == true) return true;
+                if (pointTheWinner(pattern) == true) return true;
 
 
             }
@@ -172,7 +184,7 @@ public class TicTacToe extends JFrame {
 
                 }
                 System.out.println(pattern);
-                if(pointTheWinner(pattern) == true) return true;
+                if (pointTheWinner(pattern) == true) return true;
             }
 
             pattern = "";
@@ -180,7 +192,7 @@ public class TicTacToe extends JFrame {
             for (int i = 0; i < 3; i++) {
                 for (int j = 2; j >= 0; j--) {
 
-                    if(i + j == 2) {
+                    if (i + j == 2) {
 
                         sign = buttons[i][j].getButtonSign();
                         pattern += sign;
@@ -192,8 +204,8 @@ public class TicTacToe extends JFrame {
                     }
                 }
                 System.out.println(pattern);
-                if(pointTheWinner(pattern) == true) return true;
-                         }
+                if (pointTheWinner(pattern) == true) return true;
+            }
 
             return false;
 
@@ -203,7 +215,6 @@ public class TicTacToe extends JFrame {
         public void displayMessage(String winner) {
 
             new Message(winner);
-            reset();
 
         }
 
@@ -221,33 +232,18 @@ public class TicTacToe extends JFrame {
             }
         }
 
-        public void reset(){
 
-            usedButtons.clear();
 
-            for (int i = 0; i < 3; i++) {
-                for (int j = 0; j < 3; j++) {
+        public boolean pointTheWinner(String pattern) {
 
-                    buttons[i][j].setIcon(null);
-                    buttons[i][j].setButtonSign("");
-                }
-            }
-
-        }
-
-        public boolean pointTheWinner(String pattern){
-
-            if (pattern.equals("XXX")){
+            if (pattern.equals("XXX")) {
 
                 displayMessage("X");
-               // reset();
                 whoseTurn = 2;
                 return true;
-            }
-            else if (pattern.equals("OOO")){
+            } else if (pattern.equals("OOO")) {
 
                 displayMessage("O");
-              //  reset();
                 whoseTurn = 2;
                 return true;
             }
@@ -257,4 +253,22 @@ public class TicTacToe extends JFrame {
 
     }
 
+    private class resetButtonListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+
+           reset();
+        }
+
+
+        }
+
+    private class newGameButtonListener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+
+
+        }
 }
+
+    }
