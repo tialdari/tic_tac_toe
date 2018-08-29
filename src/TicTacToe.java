@@ -20,7 +20,7 @@ public class TicTacToe extends JFrame {
     private final JPanel bottomPanel;
     private final JButton leftButton;
     private final JButton rightButton;
-    private final JLabel points;
+      static JLabel points;
     Font myFont = new Font("Calibri", Font.BOLD, 30);
     Font myFont2 = new Font("Calibri", Font.BOLD, 20);
 
@@ -32,8 +32,24 @@ public class TicTacToe extends JFrame {
     2: O
      */
 
-     private int Xpoints = 0;
-     private int Opoints = 0;
+      static int xPoints = 0;
+      static int oPoints = 0;
+
+    public  void setxPoints(int xPoints) {
+        xPoints = xPoints;
+    }
+
+    public  void setoPoints(int oPoints) {
+        oPoints = oPoints;
+    }
+
+    public int getxPoints() {
+        return xPoints;
+    }
+
+    public int getoPoints() {
+        return oPoints;
+    }
 
     public TicTacToe() {
 
@@ -145,7 +161,7 @@ public class TicTacToe extends JFrame {
 
             whoseTurn++;
 
-            if (usedButtons.size() == 9) new Message("none", 0);
+            if (usedButtons.size() == 9) new Message("none");
         }
 
 
@@ -213,7 +229,7 @@ public class TicTacToe extends JFrame {
 
         public void displayMessage(String winner) {
 
-            new Message(winner, 1);
+            new Message(winner);
 
         }
 
@@ -239,8 +255,8 @@ public class TicTacToe extends JFrame {
 
                 displayMessage("X");
                 whoseTurn = 2;
-                Xpoints++;
-                points.setText("<html>Player X : Player O  <br/> " + Xpoints + " : " + Opoints + "</html>");
+                xPoints++;
+                points.setText("<html>Player X : Player O  <br/> " + xPoints + " : " + oPoints + "</html>");
 
 
                 return true;
@@ -248,8 +264,8 @@ public class TicTacToe extends JFrame {
 
                 displayMessage("O");
                 whoseTurn = 2;
-                Opoints++;
-                points.setText("<html>Player X : Player O  <br/> " + Xpoints + " : " + Opoints + "</html>");
+                oPoints++;
+                points.setText("<html>Player X : Player O  <br/> " + xPoints + " : " + oPoints + "</html>");
                 return true;
             }
             return false;
@@ -272,9 +288,9 @@ public class TicTacToe extends JFrame {
 
         public void actionPerformed(ActionEvent e) {
 
-            Xpoints = 0;
-            Opoints = 0;
-            points.setText("<html>Player X : Player O  <br/> " + Xpoints + " : " + Opoints + "</html>");
+            new NewGameInquiry();
+
+           // points.setText("<html>Player X : Player O  <br/> " + xPoints + " : " + oPoints + "</html>");
 
         }
 }

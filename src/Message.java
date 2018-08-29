@@ -6,9 +6,10 @@ import java.awt.event.ActionListener;
 public class Message extends JFrame {
 
     JButton ok = new JButton("OK");
+    JLabel message;
 
 
-    public Message(String winner, int state){
+    public Message(String winner){
 
         JPanel panel = new JPanel();
         setSize(150, 150);
@@ -18,13 +19,14 @@ public class Message extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
 
-       JLabel message = new JLabel("no winner");
+        JLabel message = new JLabel("");
 
-        if(state == 0){
+        if(winner == "none"){
             message.setText("No winner");
-        }else if(state == 1){
+        }else{
             message.setText("The winner is: " + winner);
         }
+
 
         message.setFont(new Font("Arial Times", Font.PLAIN, 14));
         panel.add(message);
@@ -44,6 +46,12 @@ public class Message extends JFrame {
                 TicTacToe.reset();
                     dispose();
             }
+        }
+
+
+
+        public void endGameInquiry(){
+
         }
     }
 }
