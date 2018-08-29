@@ -10,7 +10,16 @@ public class TicTacToe extends JFrame {
 
     XOButton[][] buttons = new XOButton[3][3];
     List<XOButton> usedButtons = new ArrayList<>();
-    JPanel p = new JPanel();
+
+
+    private final JSplitPane splitPane;
+    private final JPanel topPanel;
+    private final JPanel bottomPanel;
+    private final JButton leftButton;
+    private final JButton rightButton;
+    private final JLabel points;
+    Font myFont = new Font("Calibri", Font.BOLD, 30);
+    Font myFont2 = new Font("Calibri", Font.BOLD, 20);
 
     int whoseTurn = 1;
 
@@ -23,14 +32,50 @@ public class TicTacToe extends JFrame {
     public TicTacToe() {
 
         super("Tic Tac Toe");
-        setSize(400, 400);
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        p.setLayout(new GridLayout(3, 3));
-        add(p);
+
+        splitPane = new JSplitPane();
+
+        topPanel = new JPanel();
+        bottomPanel = new JPanel();
+
+        setPreferredSize(new Dimension(400, 500));
+
+        getContentPane().setLayout(new GridLayout());
+        getContentPane().add(splitPane);
+
+        topPanel.setLayout(new GridLayout(1, 3));
+
+        leftButton = new JButton("Reset");
+        leftButton.setFont(myFont);
+        points = new JLabel("<html>Player 1 : Player 2  <br/> 0 : 0</html>" , SwingConstants.CENTER);
+        /*
+        String  sText  = "<html>Player 1 : Player 2  <br/> 0 : 0</html>";
+        points.setText (sText);
+        points.setHorizontalAlignment( SwingConstants.CENTER);
+        */
+        rightButton = new JButton("New\ngame");
+        rightButton.setFont(myFont2);
+
+
+        topPanel.add(leftButton);
+        topPanel.add(points);
+        topPanel.add(rightButton);
+
+        bottomPanel.setLayout(new GridLayout(3, 3));
         initialiseButtons();
-        setLocationRelativeTo(null);
+
+        splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
+        splitPane.setDividerLocation(100);
+        splitPane.setTopComponent(topPanel);
+        splitPane.setBottomComponent(bottomPanel);
+        splitPane.setEnabled(false);
+
         setVisible(true);
+        pack();
+        setLocationRelativeTo(null);
+
     }
 
     public void initialiseButtons() {
@@ -41,7 +86,7 @@ public class TicTacToe extends JFrame {
 
                 buttons[i][j] = new XOButton();
                 buttons[i][j].addActionListener(new buttonListener());
-                p.add(buttons[i][j]);
+                bottomPanel.add(buttons[i][j]);
             }
         }
 
