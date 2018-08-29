@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51a4a2f4-c7d7-4002-8924-a6d142dc3b6e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe$buttonListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToe.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="TicTacToe.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TicTacToe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="51" column="62" selection-start-line="51" selection-start-column="62" selection-end-line="51" selection-end-column="62" />
+            <state relative-caret-position="199">
+              <caret line="215" column="33" selection-start-line="215" selection-start-column="33" selection-end-line="215" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,20 +39,8 @@
       <file leaf-file-name="TicTacToeExtended.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TicTacToeExtended.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoxLayoutExample.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../BoxLayoutExample/src/BoxLayoutExample.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="50" />
+            <state relative-caret-position="-3">
+              <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,8 +51,8 @@
       <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+            <state relative-caret-position="535">
+              <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,9 +87,9 @@
         <option value="$PROJECT_DIR$/src/TicTacToe2.java" />
         <option value="$PROJECT_DIR$/src/XOButton2.java" />
         <option value="$PROJECT_DIR$/src/XOButton.java" />
-        <option value="$PROJECT_DIR$/src/Message.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/TicTacToeExtended.java" />
+        <option value="$PROJECT_DIR$/src/Message.java" />
         <option value="$PROJECT_DIR$/src/TicTacToe.java" />
       </list>
     </option>
@@ -688,16 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -707,8 +684,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TicTacToeExtended.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+        <state relative-caret-position="-3">
+          <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -717,8 +704,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TicTacToe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="51" column="62" selection-start-line="51" selection-start-column="62" selection-end-line="51" selection-end-column="62" />
+        <state relative-caret-position="199">
+          <caret line="215" column="33" selection-start-line="215" selection-start-column="33" selection-end-line="215" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

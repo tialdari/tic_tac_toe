@@ -8,11 +8,14 @@ import java.util.List;
 public class TicTacToe extends JFrame {
 
 
-    XOButton[][] buttons = new XOButton[3][3];
-    List<XOButton> usedButtons = new ArrayList<>();
+    static XOButton[][] buttons = new XOButton[3][3];
+    static List<XOButton> usedButtons = new ArrayList<>();
 
 
-    private final JSplitPane splitPane;
+    private final JSplitPane verticalSplitPane;
+    //private final JSplitPane horizontalSlitPane;
+  //  private final JSplitPane horizontalSlitPane2;
+
     private final JPanel topPanel;
     private final JPanel bottomPanel;
     private final JButton leftButton;
@@ -29,13 +32,16 @@ public class TicTacToe extends JFrame {
     2: O
      */
 
+     private int Xpoints = 0;
+     private int Opoints = 0;
+
     public TicTacToe() {
 
         super("Tic Tac Toe");
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        splitPane = new JSplitPane();
+        verticalSplitPane = new JSplitPane();
 
         topPanel = new JPanel();
         bottomPanel = new JPanel();
@@ -43,21 +49,18 @@ public class TicTacToe extends JFrame {
         setPreferredSize(new Dimension(400, 500));
 
         getContentPane().setLayout(new GridLayout());
-        getContentPane().add(splitPane);
+        getContentPane().add(verticalSplitPane);
 
-        topPanel.setLayout(new GridLayout(1, 3));
+        topPanel.setLayout(new GridLayout());
 
         leftButton = new JButton("Reset");
         leftButton.setFont(myFont);
         leftButton.addActionListener(new resetButtonListener());
-        points = new JLabel("<html>Player 1 : Player 2  <br/> 0 : 0</html>", SwingConstants.CENTER);
-        /*
-        String  sText  = "<html>Player 1 : Player 2  <br/> 0 : 0</html>";
-        points.setText (sText);
-        points.setHorizontalAlignment( SwingConstants.CENTER);
-        */
+        points = new JLabel("<html>Player X : Player O <br/> 0 : 0</html>", SwingConstants.CENTER);
+
         rightButton = new JButton("New\ngame");
         rightButton.setFont(myFont2);
+        rightButton.addActionListener(new newGameButtonListener());
 
 
         topPanel.add(leftButton);
@@ -67,11 +70,11 @@ public class TicTacToe extends JFrame {
         bottomPanel.setLayout(new GridLayout(3, 3));
         initialiseButtons();
 
-        splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
-        splitPane.setDividerLocation(100);
-        splitPane.setTopComponent(topPanel);
-        splitPane.setBottomComponent(bottomPanel);
-        splitPane.setEnabled(false);
+        verticalSplitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
+        verticalSplitPane.setDividerLocation(100);
+        verticalSplitPane.setTopComponent(topPanel);
+        verticalSplitPane.setBottomComponent(bottomPanel);
+        verticalSplitPane.setEnabled(false);
 
         setVisible(true);
         pack();
@@ -93,7 +96,7 @@ public class TicTacToe extends JFrame {
 
     }
 
-    public void reset() {
+    public static void reset() {
 
         usedButtons.clear();
 
@@ -142,8 +145,7 @@ public class TicTacToe extends JFrame {
 
             whoseTurn++;
 
-            if (usedButtons.size() == 9) reset();
-
+            if (usedButtons.size() == 9) new Message("none", 0);
         }
 
 
@@ -162,7 +164,6 @@ public class TicTacToe extends JFrame {
                     pattern += sign;
                 }
 
-                System.out.println(pattern);
                 if (pointTheWinner(pattern) == true) return true;
 
 
@@ -183,7 +184,6 @@ public class TicTacToe extends JFrame {
                     }
 
                 }
-                System.out.println(pattern);
                 if (pointTheWinner(pattern) == true) return true;
             }
 
@@ -203,7 +203,6 @@ public class TicTacToe extends JFrame {
                         }
                     }
                 }
-                System.out.println(pattern);
                 if (pointTheWinner(pattern) == true) return true;
             }
 
@@ -214,7 +213,7 @@ public class TicTacToe extends JFrame {
 
         public void displayMessage(String winner) {
 
-            new Message(winner);
+            new Message(winner, 1);
 
         }
 
@@ -240,11 +239,17 @@ public class TicTacToe extends JFrame {
 
                 displayMessage("X");
                 whoseTurn = 2;
+                Xpoints++;
+                points.setText("<html>Player X : Player O  <br/> " + Xpoints + " : " + Opoints + "</html>");
+
+
                 return true;
             } else if (pattern.equals("OOO")) {
 
                 displayMessage("O");
                 whoseTurn = 2;
+                Opoints++;
+                points.setText("<html>Player X : Player O  <br/> " + Xpoints + " : " + Opoints + "</html>");
                 return true;
             }
             return false;
@@ -267,6 +272,9 @@ public class TicTacToe extends JFrame {
 
         public void actionPerformed(ActionEvent e) {
 
+            Xpoints = 0;
+            Opoints = 0;
+            points.setText("<html>Player X : Player O  <br/> " + Xpoints + " : " + Opoints + "</html>");
 
         }
 }

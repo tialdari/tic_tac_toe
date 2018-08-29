@@ -8,7 +8,7 @@ public class Message extends JFrame {
     JButton ok = new JButton("OK");
 
 
-    public Message(String winner){
+    public Message(String winner, int state){
 
         JPanel panel = new JPanel();
         setSize(150, 150);
@@ -18,7 +18,14 @@ public class Message extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
 
-        JLabel message = new JLabel("The winner is: " + winner);
+       JLabel message = new JLabel("no winner");
+
+        if(state == 0){
+            message.setText("No winner");
+        }else if(state == 1){
+            message.setText("The winner is: " + winner);
+        }
+
         message.setFont(new Font("Arial Times", Font.PLAIN, 14));
         panel.add(message);
 
@@ -34,6 +41,7 @@ public class Message extends JFrame {
         public void actionPerformed(ActionEvent e) {
 
             if(e.getSource().equals(ok)){
+                TicTacToe.reset();
                     dispose();
             }
         }
