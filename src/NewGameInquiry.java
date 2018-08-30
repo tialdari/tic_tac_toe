@@ -4,9 +4,10 @@ import java.awt.event.ActionListener;
 
 public class NewGameInquiry extends JFrame {
 
-    JButton yes;
-    JButton no;
-    JPanel panel;
+    private final JButton yes;
+    private final JButton no;
+    private final JPanel panel;
+
 
     public NewGameInquiry(){
 
@@ -43,9 +44,9 @@ public class NewGameInquiry extends JFrame {
                 dispose();
             }
         }
-
-
     }
+
+
     private class noButtonListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {

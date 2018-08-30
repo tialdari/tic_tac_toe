@@ -8,23 +8,24 @@ import java.util.List;
 public class TicTacToe extends JFrame {
 
 
-    static XOButton[][] buttons = new XOButton[3][3];
-    static List<XOButton> usedButtons = new ArrayList<>();
+    private static XOButton[][] buttons = new XOButton[3][3];
+    private static List<XOButton> usedButtons = new ArrayList<>();
 
 
     private final JSplitPane verticalSplitPane;
     //private final JSplitPane horizontalSlitPane;
-  //  private final JSplitPane horizontalSlitPane2;
+    //private final JSplitPane horizontalSlitPane2;
 
     private final JPanel topPanel;
     private final JPanel bottomPanel;
     private final JButton leftButton;
     private final JButton rightButton;
-      static JLabel points;
-    Font myFont = new Font("Calibri", Font.BOLD, 30);
-    Font myFont2 = new Font("Calibri", Font.BOLD, 20);
+    public static JLabel points;
 
-    int whoseTurn = 1;
+    private final Font myFont = new Font("Calibri", Font.BOLD, 30);
+    private final Font myFont2 = new Font("Calibri", Font.BOLD, 20);
+
+    private int whoseTurn;
 
      /*
     0: nothing
@@ -32,24 +33,10 @@ public class TicTacToe extends JFrame {
     2: O
      */
 
-      static int xPoints = 0;
-      static int oPoints = 0;
+     public static int xPoints = 0;
+     public static int oPoints = 0;
 
-    public  void setxPoints(int xPoints) {
-        xPoints = xPoints;
-    }
 
-    public  void setoPoints(int oPoints) {
-        oPoints = oPoints;
-    }
-
-    public int getxPoints() {
-        return xPoints;
-    }
-
-    public int getoPoints() {
-        return oPoints;
-    }
 
     public TicTacToe() {
 
@@ -96,7 +83,11 @@ public class TicTacToe extends JFrame {
         pack();
         setLocationRelativeTo(null);
 
+        whoseTurn = 1;
+
     }
+
+
 
     public void initialiseButtons() {
 

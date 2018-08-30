@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 public class Message extends JFrame {
 
-    JButton ok = new JButton("OK");
+    JButton ok;
     JLabel message;
 
 
@@ -19,7 +19,8 @@ public class Message extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
 
-        JLabel message = new JLabel("");
+        message = new JLabel("");
+        ok = new JButton("OK");
 
         if(winner == "none"){
             message.setText("No winner");
@@ -46,12 +47,6 @@ public class Message extends JFrame {
                 TicTacToe.reset();
                     dispose();
             }
-        }
-
-
-
-        public void endGameInquiry(){
-
         }
     }
 }
