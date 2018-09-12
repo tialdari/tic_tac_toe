@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,7 +13,7 @@ public class NewGameInquiry extends JFrame {
     public NewGameInquiry(){
 
         panel = new JPanel();
-        setSize(300, 150);
+        setSize(400, 100);
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         add(panel);
         setResizable(false);
@@ -24,8 +25,12 @@ public class NewGameInquiry extends JFrame {
         yes = new JButton("YES");
         no = new JButton("NO");
 
+        message.setAlignmentX(CENTER_ALIGNMENT);
         yes.addActionListener(new yesButtonListener());
         no.addActionListener(new noButtonListener());
+
+        yes.setAlignmentX(CENTER_ALIGNMENT);
+        no.setAlignmentX(CENTER_ALIGNMENT);
 
         panel.add(message);
         panel.add(yes);
@@ -36,9 +41,12 @@ public class NewGameInquiry extends JFrame {
 
         public void actionPerformed(ActionEvent e) {
 
-            TicTacToe.xPoints = 0;
-            TicTacToe.oPoints = 0;
-            TicTacToe.points.setText("<html>Player X : Player O  <br/>  0 : 0 </html>");
+           int xPoints = TicTacToe.xPoints = 0;
+           int oPoints = TicTacToe.oPoints = 0;
+
+            TicTacToe.xPlayerPoints.setText(String.valueOf(xPoints));
+            TicTacToe.oPlayerPoints.setText(String.valueOf(oPoints));
+
 
             if(e.getSource().equals(yes)){
                 dispose();

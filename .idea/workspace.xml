@@ -3,9 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="51a4a2f4-c7d7-4002-8924-a6d142dc3b6e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/Message$buttonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/Message$buttonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/NewGameInquiry$noButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/NewGameInquiry$noButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/NewGameInquiry$yesButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/NewGameInquiry$yesButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/NewGameInquiry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/NewGameInquiry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe$customButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe$customButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe$newGameButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe$newGameButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe$resetButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe$resetButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToeExtended.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToeExtended.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/circle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/circle.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NewGameInquiry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewGameInquiry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TicTacToeExtended.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToeExtended.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/circle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/circle.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,17 +35,17 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+            <state relative-caret-position="75">
+              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TicTacToe.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TicTacToe.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TicTacToe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="-137">
+              <caret line="214" column="36" lean-forward="true" selection-start-line="214" selection-start-column="36" selection-end-line="214" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,8 +56,8 @@
       <file leaf-file-name="NewGameInquiry.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NewGameInquiry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="75">
+              <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,8 +68,8 @@
       <file leaf-file-name="TicTacToeExtended.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TicTacToeExtended.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="43" column="59" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
+            <state relative-caret-position="1935">
+              <caret line="129" column="36" selection-start-line="9" selection-start-column="3" selection-end-line="129" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Message.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            <state relative-caret-position="369">
+              <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,19 +116,17 @@
         <option value="$PROJECT_DIR$/src/TicTacToe2.java" />
         <option value="$PROJECT_DIR$/src/XOButton2.java" />
         <option value="$PROJECT_DIR$/src/XOButton.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/TicTacToeExtended.java" />
-        <option value="$PROJECT_DIR$/src/NewGameInquiry.java" />
-        <option value="$PROJECT_DIR$/src/Message.java" />
         <option value="$PROJECT_DIR$/src/TicTacToe.java" />
+        <option value="$PROJECT_DIR$/src/NewGameInquiry.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Message.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1295" />
-    <option name="y" value="23" />
-    <option name="width" value="145" />
-    <option name="height" value="807" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -123,6 +136,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,9 +153,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -253,7 +266,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -269,7 +282,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49928468" weight="0.32969698" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15307583" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16165951" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -286,29 +299,29 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49791667" visible="true" weight="0.21939394" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.15307583" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969698" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3987879" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
       <window_info id="Learn" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49928468" weight="0.32969698" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007153" side_tool="true" weight="0.32969698" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3987879" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969698" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007153" side_tool="true" weight="0.32969698" />
       <window_info id="Capture Tool" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32848486" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info id="Favorites" order="7" side_tool="true" />
@@ -323,13 +336,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/XOButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TicTacToe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -663,17 +669,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../BoxLayoutExample/src/BoxLayoutExample.java">
+    <entry file="file://$PROJECT_DIR$/src/TicTacToeExtended.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="1935">
+          <caret line="129" column="36" selection-start-line="9" selection-start-column="3" selection-end-line="129" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -684,20 +686,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TicTacToeExtended.java">
+    <entry file="file://$PROJECT_DIR$/../BoxLayoutExample/src/BoxLayoutExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="43" column="59" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        <state relative-caret-position="525">
+          <caret line="35" column="50" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -706,18 +698,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NewGameInquiry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="75">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/circle.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TicTacToe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="-137">
+          <caret line="214" column="36" lean-forward="true" selection-start-line="214" selection-start-column="36" selection-end-line="214" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -3,24 +3,23 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class Message extends JFrame {
 
-    JButton ok;
-    JLabel message;
+   private JButton ok;
+   private JLabel message;
 
 
     public Message(String winner){
 
-        JPanel panel = new JPanel();
-        setSize(150, 150);
-        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        add(panel);
-        setResizable(false);
-        setLocationRelativeTo(null);
-        setVisible(true);
+        JPanel pane = new JPanel();
+        pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
+
+        setPreferredSize(new Dimension(150, 100));
 
         message = new JLabel("");
-        ok = new JButton("OK");
+        message.setAlignmentX(Component.CENTER_ALIGNMENT);
+        pane.add(message);
 
         if(winner == "none"){
             message.setText("No winner");
@@ -28,13 +27,19 @@ public class Message extends JFrame {
             message.setText("The winner is: " + winner);
         }
 
-
-        message.setFont(new Font("Arial Times", Font.PLAIN, 14));
-        panel.add(message);
-
-        ok.setAlignmentX(Component.CENTER_ALIGNMENT);
+        ok = new JButton("OK");
         ok.addActionListener(new buttonListener());
-        panel.add(ok);
+        ok.setVisible(true);
+        ok.setAlignmentX(Component.CENTER_ALIGNMENT);
+        pane.add(ok);
+
+
+        add(pane);
+        setResizable(false);
+        setVisible(true);
+        setLocationRelativeTo(null);
+
+        pack();
 
     }
 
