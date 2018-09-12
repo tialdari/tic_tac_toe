@@ -19,6 +19,8 @@ public class Message extends JFrame {
 
         message = new JLabel("");
         message.setAlignmentX(Component.CENTER_ALIGNMENT);
+        message.setAlignmentY(Component.CENTER_ALIGNMENT);
+
         pane.add(message);
 
         if(winner == "none"){
@@ -31,6 +33,8 @@ public class Message extends JFrame {
         ok.addActionListener(new buttonListener());
         ok.setVisible(true);
         ok.setAlignmentX(Component.CENTER_ALIGNMENT);
+        ok.setAlignmentY(Component.CENTER_ALIGNMENT);
+
         pane.add(ok);
 
 

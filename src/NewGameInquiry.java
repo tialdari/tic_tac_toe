@@ -13,7 +13,7 @@ public class NewGameInquiry extends JFrame {
     public NewGameInquiry(){
 
         panel = new JPanel();
-        setSize(400, 100);
+        setSize(300, 100);
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         add(panel);
         setResizable(false);

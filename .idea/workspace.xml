@@ -3,24 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="51a4a2f4-c7d7-4002-8924-a6d142dc3b6e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/Message$buttonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/Message$buttonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/NewGameInquiry$noButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/NewGameInquiry$noButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/NewGameInquiry$yesButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/NewGameInquiry$yesButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/NewGameInquiry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/NewGameInquiry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe$customButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe$customButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe$newGameButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe$newGameButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe$resetButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe$resetButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToeExtended.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/TicTacToeExtended.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tic_tac_toe/circle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tic_tac_toe/circle.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NewGameInquiry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewGameInquiry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TicTacToeExtended.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToeExtended.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/circle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/circle.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewGameInquiry.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NewGameInquiry.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/NewGameInquiry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+            <state relative-caret-position="180">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Message.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+            <state relative-caret-position="510">
+              <caret line="34" column="53" lean-forward="true" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,9 +102,9 @@
         <option value="$PROJECT_DIR$/src/XOButton.java" />
         <option value="$PROJECT_DIR$/src/TicTacToeExtended.java" />
         <option value="$PROJECT_DIR$/src/TicTacToe.java" />
-        <option value="$PROJECT_DIR$/src/NewGameInquiry.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Message.java" />
+        <option value="$PROJECT_DIR$/src/NewGameInquiry.java" />
       </list>
     </option>
   </component>
@@ -696,16 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NewGameInquiry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/circle.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -728,8 +702,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+        <state relative-caret-position="510">
+          <caret line="34" column="53" lean-forward="true" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NewGameInquiry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
