@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class NewGameInquiry extends JFrame {
+public class NewGameInquiry extends JFrame { //window that appears when the "new game" button is clicked
 
     private final JButton yes;
     private final JButton no;

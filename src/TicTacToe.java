@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TicTacToe extends JFrame {
+public class TicTacToe extends JFrame {  // the main game window
 
 
     private static XOButton[][] buttons = new XOButton[3][3];

@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class Message extends JFrame {
+public class Message extends JFrame {  //window that appears where sb wins the game or there's no winner
 
    private JButton ok;
    private JLabel message;

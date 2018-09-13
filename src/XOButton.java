@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class XOButton extends JButton {
+public class XOButton extends JButton { // class of a single button
 
     ImageIcon X, O;
     String buttonSign;
