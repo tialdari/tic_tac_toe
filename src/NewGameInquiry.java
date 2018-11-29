@@ -8,9 +8,9 @@ public class NewGameInquiry extends JFrame { //window that appears when the "new
     private final JButton yes;
     private final JButton no;
     private final JPanel panel;
+    private TicTacToe ticTacToe;
 
-
-    public NewGameInquiry(){
+    public NewGameInquiry(TicTacToe ticTacToe){
 
         panel = new JPanel();
         setSize(300, 100);
@@ -19,6 +19,7 @@ public class NewGameInquiry extends JFrame { //window that appears when the "new
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
+        this.ticTacToe = ticTacToe;
 
         JLabel message = new JLabel("Are you sure you want to start a new game?");
 
@@ -49,6 +50,7 @@ public class NewGameInquiry extends JFrame { //window that appears when the "new
 
 
             if(e.getSource().equals(yes)){
+                ticTacToe.reset();
                 dispose();
             }
         }

@@ -63,7 +63,7 @@ public class TicTacToe extends JFrame {  // the main game window
 
         rightButton = new JButton("New game");
         rightButton.setFont(myFont2);
-        rightButton.addActionListener(new newGameButtonListener());
+        rightButton.addActionListener(new newGameButtonListener(this));
 
         xPlayerPoints = new JLabel(String.valueOf(TicTacToe.xPoints));
         oPlayerPoints = new JLabel((String.valueOf(TicTacToe.oPoints)));
@@ -308,9 +308,15 @@ public class TicTacToe extends JFrame {  // the main game window
 
     private class newGameButtonListener implements ActionListener {
 
+        private TicTacToe ticTacToe;
+
+        public newGameButtonListener(TicTacToe ticTacToe){
+            this.ticTacToe = ticTacToe;
+        }
+
         public void actionPerformed(ActionEvent e) {
 
-            new NewGameInquiry();
+            new NewGameInquiry(ticTacToe);
 
            // points.setText("<html>Player X : Player O  <br/> " + xPoints + " : " + oPoints + "</html>");
 
