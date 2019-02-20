@@ -89,7 +89,7 @@ public class TicTacToe extends JFrame {
         setLocationRelativeTo(null);
     }
 
-    public void panelButtonsInit(){
+    private void panelButtonsInit(){
 
         leftButton.setFont(myFont);
         leftButton.addActionListener(new resetButtonListener());
@@ -98,13 +98,13 @@ public class TicTacToe extends JFrame {
         rightButton.addActionListener(new newGameButtonListener(this));
     }
 
-    public void pointsInit(){
+    private void pointsInit(){
 
         points.setHorizontalAlignment(SwingConstants.CENTER);
         points.setFont(myFont3);
     }
 
-    public void layoutInit(){
+    private void layoutInit(){
 
         layout.putConstraint(SpringLayout.WEST, points, 2, SpringLayout.WEST, topPanel);
 
@@ -118,7 +118,7 @@ public class TicTacToe extends JFrame {
         layout.putConstraint(SpringLayout.WEST, oPlayerPoints, 62 , SpringLayout.WEST, topPanel);
     }
 
-    public void panelsInit(){
+    private void panelsInit(){
 
         topPanel.setLayout(layout);
         topPanel.add(points);
@@ -129,7 +129,7 @@ public class TicTacToe extends JFrame {
         bottomPanel.setLayout(new GridLayout(3, 3));
     }
 
-    public void splitPaneInit(){
+    private void splitPaneInit(){
 
         splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
         splitPane2.setOrientation(JSplitPane.HORIZONTAL_SPLIT);
@@ -151,7 +151,7 @@ public class TicTacToe extends JFrame {
         splitPane3.setEnabled(false);
     }
 
-    public void initialiseButtons() {
+    private void initialiseButtons() {
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -223,42 +223,38 @@ public class TicTacToe extends JFrame {
         public boolean checkForWin() {
 
             String sign = "";
-            String pattern = "";
+            StringBuilder pattern = new StringBuilder();
 
             for (int i = 0; i < 3; i++) {
-
-                pattern = "";
 
                 for (int j = 0; j < 3; j++) {
 
                     sign = buttons[i][j].getButtonSign();
-                    pattern += sign;
+                    pattern.append(sign);
                 }
 
-                if (pointTheWinner(pattern)) return true;
-
-
+                if (pointTheWinner(pattern.toString())) return true;
             }
 
             System.out.println(pattern);
+            pattern.delete(0, pattern.length());
 
-            pattern = "";
             for (int i = 0; i < 3; i++) {
                 for (int j = i; j == i; j++) {
 
                     sign = buttons[i][j].getButtonSign();
-                    pattern += sign;
+                    pattern.append(sign);
 
                     if (sign == "") {
-                        pattern = "";
+                        pattern.delete(0, pattern.length());
                         break;
                     }
 
                 }
-                if (pointTheWinner(pattern)) return true;
+                if (pointTheWinner(pattern.toString())) return true;
             }
 
-            pattern = "";
+            pattern.delete(0, pattern.length());
 
             for (int i = 0; i < 3; i++) {
                 for (int j = 2; j >= 0; j--) {
@@ -266,15 +262,15 @@ public class TicTacToe extends JFrame {
                     if (i + j == 2) {
 
                         sign = buttons[i][j].getButtonSign();
-                        pattern += sign;
+                        pattern.append(sign);
 
                         if (sign == "") {
-                            pattern = "";
+                            pattern.delete(0, pattern.length());
                             break;
                         }
                     }
                 }
-                if (pointTheWinner(pattern) == true) return true;
+                if (pointTheWinner(pattern.toString()) == true) return true;
             }
 
             return false;
@@ -289,7 +285,7 @@ public class TicTacToe extends JFrame {
 
         }
 
-        public void transpose() {
+        private void transpose() {
 
             XOButton temporary;
 
@@ -304,8 +300,7 @@ public class TicTacToe extends JFrame {
         }
 
 
-
-        public boolean pointTheWinner(String pattern) {
+        private boolean pointTheWinner(String pattern) {
 
             if (pattern.equals("XXX")) {
 
