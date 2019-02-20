@@ -200,7 +200,7 @@ public class TicTacToe extends JFrame {  // the main game window
                     pattern += sign;
                 }
 
-                if (pointTheWinner(pattern) == true) return true;
+                if (pointTheWinner(pattern) == (true)) return true;
 
 
             }

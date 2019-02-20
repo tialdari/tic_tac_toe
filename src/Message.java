@@ -8,6 +8,8 @@ public class Message extends JFrame {  //window that appears where sb wins the g
 
    private JButton ok;
    private JLabel message;
+   private String winner;
+
 
 
     public Message(String winner){
@@ -23,12 +25,6 @@ public class Message extends JFrame {  //window that appears where sb wins the g
 
         pane.add(message);
 
-        if(winner == "none"){
-            message.setText("No winner");
-        }else{
-            message.setText("The winner is: " + winner);
-        }
-
         ok = new JButton("OK");
         ok.addActionListener(new buttonListener());
         ok.setVisible(true);
@@ -37,13 +33,22 @@ public class Message extends JFrame {  //window that appears where sb wins the g
 
         pane.add(ok);
 
-
         add(pane);
         setResizable(false);
         setVisible(true);
         setLocationRelativeTo(null);
 
         pack();
+
+    }
+
+    public void messageInit(String winner){
+
+        if(winner.equals(new String("none"))){
+            message.setText("No winner");
+        }else{
+            message.setText("The winner is: " + winner);
+        }
 
     }
 
