@@ -6,40 +6,47 @@ import java.awt.event.ActionListener;
 
 public class Message extends JFrame {  //window that appears where sb wins the game or there's no winner
 
-   private JButton ok;
-   private JLabel message;
-   private String winner;
-
-
+    private JPanel pane;
+    private JButton ok;
+    private JLabel message;
+    private String winner;
 
     public Message(String winner){
 
-        JPanel pane = new JPanel();
-        pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
+        pane = new JPanel();
+        ok = new JButton("OK");
+        message = new JLabel("");
+        this.winner = winner;
+    }
 
+    public void windowInit(){
+
+        okButtonInit();
+        messageInit(winner);
+        paneInit(ok, message);
+
+        setResizable(false);
+        setVisible(true);
+        setLocationRelativeTo(null);
         setPreferredSize(new Dimension(150, 100));
 
-        message = new JLabel("");
-        message.setAlignmentX(Component.CENTER_ALIGNMENT);
-        message.setAlignmentY(Component.CENTER_ALIGNMENT);
+        pack();
+    }
 
+    public void paneInit(JButton ok, JLabel message){
+
+        pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
         pane.add(message);
+        pane.add(ok);
+        add(pane);
+    }
 
-        ok = new JButton("OK");
+    public void okButtonInit(){
+
         ok.addActionListener(new buttonListener());
         ok.setVisible(true);
         ok.setAlignmentX(Component.CENTER_ALIGNMENT);
         ok.setAlignmentY(Component.CENTER_ALIGNMENT);
-
-        pane.add(ok);
-
-        add(pane);
-        setResizable(false);
-        setVisible(true);
-        setLocationRelativeTo(null);
-
-        pack();
-
     }
 
     public void messageInit(String winner){
@@ -50,6 +57,8 @@ public class Message extends JFrame {  //window that appears where sb wins the g
             message.setText("The winner is: " + winner);
         }
 
+        message.setAlignmentX(Component.CENTER_ALIGNMENT);
+        message.setAlignmentY(Component.CENTER_ALIGNMENT);
     }
 
     private class buttonListener implements ActionListener {

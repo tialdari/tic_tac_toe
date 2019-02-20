@@ -19,7 +19,6 @@ public class XOButton extends JButton { // class of a single button
         return O;
     }
 
-
     public String getButtonSign() {
         return buttonSign;
     }

@@ -8,8 +8,8 @@ import java.util.List;
 public class TicTacToe extends JFrame {  // the main game window
 
 
-    private static XOButton[][] buttons = new XOButton[3][3];
-    private static List<XOButton> usedButtons = new ArrayList<>();
+    private static XOButton[][] buttons;
+    private static List<XOButton> usedButtons;
 
     private final JSplitPane splitPane;
     private final JSplitPane splitPane2;
@@ -17,20 +17,53 @@ public class TicTacToe extends JFrame {  // the main game window
 
     private final JPanel topPanel;
     private final JPanel bottomPanel;
+
     private final JButton leftButton;
     private final JButton rightButton;
+
     public static JLabel points;
     public static JLabel xPlayerPoints;
     public static JLabel oPlayerPoints;
 
-    Font myFont = new Font("Calibri", Font.BOLD, 30);
-    Font myFont2 = new Font("Calibri", Font.BOLD, 20);
-    Font myFont3 = new Font("Calibri", Font.BOLD, 12);
+    private final Font myFont;
+    private final Font myFont2;
+    private final Font myFont3;
 
-    int whoseTurn = 1;
+    private int whoseTurn;
 
-    public static int xPoints = 0;
-    public static int oPoints = 0;
+    public static int xPoints;
+    public static int oPoints;
+
+    public TicTacToe(){
+
+        super("Tic Tac Toe");
+
+        buttons = new XOButton[3][3];
+        usedButtons = new ArrayList<>();
+
+        splitPane = new JSplitPane();
+        splitPane2 = new JSplitPane();
+        splitPane3 = new JSplitPane();
+
+        topPanel = new JPanel();
+        bottomPanel = new JPanel();
+
+        leftButton = new JButton("Reset");
+        rightButton = new JButton("New game");
+
+        points = new JLabel("<html>Player X : Player O </html>" , SwingConstants.CENTER);
+        xPlayerPoints = new JLabel(String.valueOf(TicTacToe.xPoints));
+        oPlayerPoints = new JLabel((String.valueOf(TicTacToe.oPoints)));
+
+        myFont = new Font("Calibri", Font.BOLD, 30);
+        myFont2 = new Font("Calibri", Font.BOLD, 20);
+        myFont3 = new Font("Calibri", Font.BOLD, 12);
+
+        whoseTurn = 1;
+
+        xPoints = 0;
+        oPoints = 0;
+    }
 
     public TicTacToe() {
 
@@ -181,7 +214,10 @@ public class TicTacToe extends JFrame {  // the main game window
 
             whoseTurn++;
 
-            if (usedButtons.size() == 9) new Message("none");
+            if (usedButtons.size() == 9){
+                JFrame message = new Message("none");
+                ((Message) message).windowInit();
+            }
         }
 
 
@@ -249,7 +285,8 @@ public class TicTacToe extends JFrame {  // the main game window
 
         public void displayMessage(String winner) {
 
-            new Message(winner);
+            JFrame message = new Message(winner);
+            ((Message) message).windowInit();
 
         }
 
@@ -316,10 +353,8 @@ public class TicTacToe extends JFrame {  // the main game window
 
         public void actionPerformed(ActionEvent e) {
 
-            new NewGameInquiry(ticTacToe);
-
-           // points.setText("<html>Player X : Player O  <br/> " + xPoints + " : " + oPoints + "</html>");
-
+           JFrame newGameInquiry = new NewGameInquiry(ticTacToe);
+           ((NewGameInquiry) newGameInquiry).windowInit();
         }
 }
 
