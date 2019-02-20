@@ -2,8 +2,8 @@ import javax.swing.*;
 
 public class XOButton extends JButton { // class of a single button
 
-    ImageIcon X, O;
-    String buttonSign;
+    private ImageIcon X, O;
+    private String buttonSign;
 
     public XOButton(){
         X = new ImageIcon(this.getClass().getResource("cross.jpg"));
@@ -26,6 +26,5 @@ public class XOButton extends JButton { // class of a single button
     public void setButtonSign(String buttonSign) {
         this.buttonSign = buttonSign;
     }
-
 
 }

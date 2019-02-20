@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TicTacToe extends JFrame {  // the main game window
+public class TicTacToe extends JFrame {
 
 
     private static XOButton[][] buttons;
@@ -15,6 +15,8 @@ public class TicTacToe extends JFrame {  // the main game window
     private final JSplitPane splitPane2;
     private final JSplitPane splitPane3;
 
+    private Label punctuation;
+    private SpringLayout layout;
     private final JPanel topPanel;
     private final JPanel bottomPanel;
 
@@ -45,6 +47,8 @@ public class TicTacToe extends JFrame {  // the main game window
         splitPane2 = new JSplitPane();
         splitPane3 = new JSplitPane();
 
+        punctuation = new Label(" :");
+        layout = new SpringLayout();
         topPanel = new JPanel();
         bottomPanel = new JPanel();
 
@@ -65,48 +69,42 @@ public class TicTacToe extends JFrame {  // the main game window
         oPoints = 0;
     }
 
-    public TicTacToe() {
 
-        super("Tic Tac Toe");
+    public void windowInit(){
+
+        initialiseButtons();
+        panelButtonsInit();
+        pointsInit();
+        layoutInit();
+        panelsInit();
+        splitPaneInit();
+
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-
-        splitPane = new JSplitPane();
-        splitPane2 = new JSplitPane();
-        splitPane3 = new JSplitPane();
-
-
-        topPanel = new JPanel();
-        bottomPanel = new JPanel();
-
         setPreferredSize(new Dimension(400, 500));
-
         getContentPane().setLayout(new GridLayout());
         getContentPane().add(splitPane);
+        setVisible(true);
+        pack();
+        setLocationRelativeTo(null);
+    }
 
-        SpringLayout layout = new SpringLayout();
-        topPanel.setLayout(layout);
+    public void panelButtonsInit(){
 
-        leftButton = new JButton("Reset");
         leftButton.setFont(myFont);
         leftButton.addActionListener(new resetButtonListener());
-        points = new JLabel("<html>Player X : Player O </html>" , SwingConstants.CENTER);
-        points.setHorizontalAlignment( SwingConstants.CENTER);
-        points.setFont(myFont3);
 
-        rightButton = new JButton("New game");
         rightButton.setFont(myFont2);
         rightButton.addActionListener(new newGameButtonListener(this));
+    }
 
-        xPlayerPoints = new JLabel(String.valueOf(TicTacToe.xPoints));
-        oPlayerPoints = new JLabel((String.valueOf(TicTacToe.oPoints)));
+    public void pointsInit(){
 
-        Label punctuation = new Label(" :");
+        points.setHorizontalAlignment(SwingConstants.CENTER);
+        points.setFont(myFont3);
+    }
 
-        topPanel.add(points);
-        topPanel.add(xPlayerPoints);
-        topPanel.add(punctuation);
-        topPanel.add(oPlayerPoints);
+    public void layoutInit(){
 
         layout.putConstraint(SpringLayout.WEST, points, 2, SpringLayout.WEST, topPanel);
 
@@ -118,11 +116,20 @@ public class TicTacToe extends JFrame {  // the main game window
 
         layout.putConstraint(SpringLayout.NORTH, oPlayerPoints, 20, SpringLayout.NORTH, topPanel);
         layout.putConstraint(SpringLayout.WEST, oPlayerPoints, 62 , SpringLayout.WEST, topPanel);
+    }
 
+    public void panelsInit(){
 
+        topPanel.setLayout(layout);
+        topPanel.add(points);
+        topPanel.add(xPlayerPoints);
+        topPanel.add(punctuation);
+        topPanel.add(oPlayerPoints);
 
         bottomPanel.setLayout(new GridLayout(3, 3));
-        initialiseButtons();
+    }
+
+    public void splitPaneInit(){
 
         splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
         splitPane2.setOrientation(JSplitPane.HORIZONTAL_SPLIT);
@@ -142,17 +149,9 @@ public class TicTacToe extends JFrame {  // the main game window
         splitPane3.setTopComponent(topPanel);
         splitPane3.setBottomComponent(rightButton);
         splitPane3.setEnabled(false);
-
-
-        setVisible(true);
-        pack();
-        setLocationRelativeTo(null);
     }
 
-
-
     public void initialiseButtons() {
-
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -207,9 +206,9 @@ public class TicTacToe extends JFrame {  // the main game window
 
             }
 
-            if (checkForWin() == true) return;
+            if (checkForWin()) return;
             transpose();
-            if (checkForWin() == true) return;
+            if (checkForWin()) return;
             transpose();
 
             whoseTurn++;
@@ -236,7 +235,7 @@ public class TicTacToe extends JFrame {  // the main game window
                     pattern += sign;
                 }
 
-                if (pointTheWinner(pattern) == (true)) return true;
+                if (pointTheWinner(pattern)) return true;
 
 
             }
@@ -256,7 +255,7 @@ public class TicTacToe extends JFrame {  // the main game window
                     }
 
                 }
-                if (pointTheWinner(pattern) == true) return true;
+                if (pointTheWinner(pattern)) return true;
             }
 
             pattern = "";
@@ -337,11 +336,9 @@ public class TicTacToe extends JFrame {  // the main game window
 
         public void actionPerformed(ActionEvent e) {
 
-           reset();
+            reset();
         }
-
-
-        }
+    }
 
     private class newGameButtonListener implements ActionListener {
 
@@ -356,6 +353,6 @@ public class TicTacToe extends JFrame {  // the main game window
            JFrame newGameInquiry = new NewGameInquiry(ticTacToe);
            ((NewGameInquiry) newGameInquiry).windowInit();
         }
-}
-
     }
+
+}
