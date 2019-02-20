@@ -7,7 +7,11 @@ import java.util.List;
 
 public class TicTacToe extends JFrame {
 
-
+    private final int NUMBER_OF_BUTTONS = 9;
+    private static final int COLS_NUM = 3;
+    private static final int ROWS_NUM = 3;
+    private final String CROSS_WIN_PATTERN = "XXX";
+    private final String CIRCLE_WIN_PATTERN = "OOO";
     private static XOButton[][] buttons;
     private static List<XOButton> usedButtons;
 
@@ -40,7 +44,7 @@ public class TicTacToe extends JFrame {
 
         super("Tic Tac Toe");
 
-        buttons = new XOButton[3][3];
+        buttons = new XOButton[ROWS_NUM][COLS_NUM];
         usedButtons = new ArrayList<>();
 
         splitPane = new JSplitPane();
@@ -126,7 +130,7 @@ public class TicTacToe extends JFrame {
         topPanel.add(punctuation);
         topPanel.add(oPlayerPoints);
 
-        bottomPanel.setLayout(new GridLayout(3, 3));
+        bottomPanel.setLayout(new GridLayout(ROWS_NUM, COLS_NUM));
     }
 
     private void splitPaneInit(){
@@ -153,8 +157,8 @@ public class TicTacToe extends JFrame {
 
     private void initialiseButtons() {
 
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
+        for (int i = 0; i < ROWS_NUM; i++) {
+            for (int j = 0; j < COLS_NUM; j++) {
 
                 buttons[i][j] = new XOButton();
                 buttons[i][j].addActionListener(new customButtonListener());
@@ -168,8 +172,8 @@ public class TicTacToe extends JFrame {
 
         usedButtons.clear();
 
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
+        for (int i = 0; i < ROWS_NUM; i++) {
+            for (int j = 0; j < COLS_NUM; j++) {
 
                 buttons[i][j].setIcon(null);
                 buttons[i][j].setButtonSign("");
@@ -191,18 +195,20 @@ public class TicTacToe extends JFrame {
 
             whoseTurn %= 2;
 
+            final int PLAYER_ONE = 0;
+            final int PLAYER_TWO = 1;
+
             switch (whoseTurn) {
 
-                case 0:
+                case PLAYER_ONE:
                     buttonClicked.setIcon(buttonClicked.getImageX());
                     buttonClicked.setButtonSign("X");
                     break;
 
-                case 1:
+                case PLAYER_TWO:
                     buttonClicked.setIcon(buttonClicked.getImageO());
                     buttonClicked.setButtonSign("O");
                     break;
-
 
             }
 
@@ -213,7 +219,7 @@ public class TicTacToe extends JFrame {
 
             whoseTurn++;
 
-            if (usedButtons.size() == 9){
+            if (usedButtons.size() == NUMBER_OF_BUTTONS){
                 JFrame message = new Message("none");
                 ((Message) message).windowInit();
             }
@@ -225,9 +231,9 @@ public class TicTacToe extends JFrame {
             String sign = "";
             StringBuilder pattern = new StringBuilder();
 
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < ROWS_NUM; i++) {
 
-                for (int j = 0; j < 3; j++) {
+                for (int j = 0; j < COLS_NUM; j++) {
 
                     sign = buttons[i][j].getButtonSign();
                     pattern.append(sign);
@@ -239,7 +245,7 @@ public class TicTacToe extends JFrame {
             System.out.println(pattern);
             pattern.delete(0, pattern.length());
 
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < ROWS_NUM; i++) {
                 for (int j = i; j == i; j++) {
 
                     sign = buttons[i][j].getButtonSign();
@@ -256,7 +262,7 @@ public class TicTacToe extends JFrame {
 
             pattern.delete(0, pattern.length());
 
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < ROWS_NUM; i++) {
                 for (int j = 2; j >= 0; j--) {
 
                     if (i + j == 2) {
@@ -274,7 +280,6 @@ public class TicTacToe extends JFrame {
             }
 
             return false;
-
         }
 
 
@@ -289,8 +294,8 @@ public class TicTacToe extends JFrame {
 
             XOButton temporary;
 
-            for (int i = 0; i < 3; i++) {
-                for (int j = i; j < 3; j++) {
+            for (int i = 0; i < ROWS_NUM; i++) {
+                for (int j = i; j < COLS_NUM; j++) {
 
                     temporary = buttons[i][j];
                     buttons[i][j] = buttons[j][i];
@@ -302,7 +307,7 @@ public class TicTacToe extends JFrame {
 
         private boolean pointTheWinner(String pattern) {
 
-            if (pattern.equals("XXX")) {
+            if (pattern.equals(CROSS_WIN_PATTERN)) {
 
                 displayMessage("X");
                 whoseTurn = 2;
@@ -312,7 +317,7 @@ public class TicTacToe extends JFrame {
 
 
                 return true;
-            } else if (pattern.equals("OOO")) {
+            } else if (pattern.equals(CIRCLE_WIN_PATTERN)) {
 
                 displayMessage("O");
                 whoseTurn = 2;
