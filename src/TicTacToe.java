@@ -12,6 +12,8 @@ public class TicTacToe extends JFrame {
     private static final int ROWS_NUM = 3;
     private final String CROSS_WIN_PATTERN = "XXX";
     private final String CIRCLE_WIN_PATTERN = "OOO";
+    private int[] diagonalIndexesUp_Down;
+    private int[] diagonalIndexesDown_Up;
     private static XOButton[][] buttons;
     private static List<XOButton> usedButtons;
 
@@ -43,6 +45,9 @@ public class TicTacToe extends JFrame {
     public TicTacToe(){
 
         super("Tic Tac Toe");
+
+        diagonalIndexesUp_Down = new int[ROWS_NUM];
+        diagonalIndexesDown_Up = new int[ROWS_NUM];
 
         buttons = new XOButton[ROWS_NUM][COLS_NUM];
         usedButtons = new ArrayList<>();
@@ -82,6 +87,7 @@ public class TicTacToe extends JFrame {
         layoutInit();
         panelsInit();
         splitPaneInit();
+        diagonalIndexesInit();
 
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -91,6 +97,15 @@ public class TicTacToe extends JFrame {
         setVisible(true);
         pack();
         setLocationRelativeTo(null);
+    }
+
+    public void diagonalIndexesInit() {
+
+        for (int i = 0; i < ROWS_NUM; i++) {
+            diagonalIndexesUp_Down[i] = 3 * i + i;
+            diagonalIndexesDown_Up[i] = ROWS_NUM * (i + 1) - (i + 1);
+            System.out.println(diagonalIndexesDown_Up[i]);
+        }
     }
 
     private void panelButtonsInit(){
@@ -226,6 +241,59 @@ public class TicTacToe extends JFrame {
         }
 
 
+         public boolean checkForWin(){
+
+           String sign = "";
+           StringBuilder pattern = new StringBuilder();
+
+            for (int i = 0; i < ROWS_NUM; i++) {
+                for (int j = 0; j < COLS_NUM; j++) {
+
+                    sign = buttons[i][j].getButtonSign();
+                    pattern.append(sign);
+                }
+                if (patternCheck(pattern)) return true;
+            }
+
+             int rowIndex;
+             int columnIndex;
+
+            for (int i = 0; i < ROWS_NUM; i++) {
+
+                columnIndex = diagonalIndexesUp_Down[i] % ROWS_NUM;
+                rowIndex = i;
+               sign = buttons[rowIndex][columnIndex].getButtonSign();
+               pattern.append(sign);
+               System.out.println("i: " + i + ", row index: " + rowIndex + ", columnIndex: " + columnIndex);
+            }
+
+             if (patternCheck(pattern)) return true;
+
+            for (int i = 0; i < ROWS_NUM; i++) {
+
+                columnIndex = diagonalIndexesDown_Up[i] % ROWS_NUM;
+                rowIndex = i;
+                sign = buttons[rowIndex][columnIndex].getButtonSign();
+                pattern.append(sign);
+                System.out.println("i: " + i + ", row index: " + rowIndex + ", columnIndex: " + columnIndex);
+
+            }
+
+             if (patternCheck(pattern)) return true;
+            else return  false;
+         }
+
+
+        private boolean patternCheck(StringBuilder pattern){
+
+            if (pointTheWinner(pattern.toString())) return true;
+            else {
+                pattern.delete(0, pattern.length());
+                return false;
+            }
+        }
+
+        /*
         public boolean checkForWin() {
 
             String sign = "";
@@ -251,7 +319,7 @@ public class TicTacToe extends JFrame {
                     sign = buttons[i][j].getButtonSign();
                     pattern.append(sign);
 
-                    if (sign == "") {
+                    if (sign.equals(new String(""))) {
                         pattern.delete(0, pattern.length());
                         break;
                     }
@@ -270,7 +338,7 @@ public class TicTacToe extends JFrame {
                         sign = buttons[i][j].getButtonSign();
                         pattern.append(sign);
 
-                        if (sign == "") {
+                        if (sign.equals(new String(""))) {
                             pattern.delete(0, pattern.length());
                             break;
                         }
@@ -282,6 +350,7 @@ public class TicTacToe extends JFrame {
             return false;
         }
 
+*/
 
         public void displayMessage(String winner) {
 
@@ -303,7 +372,6 @@ public class TicTacToe extends JFrame {
                 }
             }
         }
-
 
         private boolean pointTheWinner(String pattern) {
 

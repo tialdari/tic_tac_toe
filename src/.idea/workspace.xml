@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6840be37-bc6f-4806-8758-3a1aa512aa92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/tic_tac_toe/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/tic_tac_toe/Message$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/tic_tac_toe/Message$buttonListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/tic_tac_toe/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/tic_tac_toe/NewGameInquiry$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/tic_tac_toe/NewGameInquiry$noButtonListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/tic_tac_toe/NewGameInquiry$yesButtonListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/tic_tac_toe/NewGameInquiry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/tic_tac_toe/TicTacToe$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/tic_tac_toe/TicTacToe$customButtonListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/tic_tac_toe/TicTacToe$newGameButtonListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/tic_tac_toe/TicTacToe$resetButtonListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/tic_tac_toe/TicTacToe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/tic_tac_toe/XOButton.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tic_tac_toe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../tic_tac_toe.iml" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/IdeaProjects/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +28,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
+            <state relative-caret-position="570">
               <caret line="38" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -31,7 +44,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewGameInquiry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-329">
+            <state>
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TicTacToe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3030">
-              <caret line="202" column="47" selection-start-line="202" selection-start-column="47" selection-end-line="202" selection-end-column="47" />
+            <state relative-caret-position="428">
+              <caret line="275" column="37" selection-start-line="275" selection-start-column="37" selection-end-line="275" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,6 +80,7 @@
       <find>message</find>
       <find>ok</find>
       <find>==</find>
+      <find>check</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -90,7 +104,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -108,12 +121,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550605325889" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550772964399" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -164,45 +178,47 @@
       <option name="presentableId" value="Default" />
       <updated>1550603570640</updated>
       <workItem from="1550603577756" duration="773000" />
+      <workItem from="1550767839238" duration="3917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="773000" />
+    <option name="totallyTimeSpent" value="4690000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Messages" weight="0.32891566" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32891566" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,17 +227,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
+        <state relative-caret-position="570">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewGameInquiry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-329">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -235,10 +242,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NewGameInquiry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3030">
-          <caret line="202" column="47" selection-start-line="202" selection-start-column="47" selection-end-line="202" selection-end-column="47" />
+        <state relative-caret-position="428">
+          <caret line="275" column="37" selection-start-line="275" selection-start-column="37" selection-end-line="275" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
